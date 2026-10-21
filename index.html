@@ -133,7 +133,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stro
 <div class="app">
 <aside class="side" id="nav"></aside>
 <main>
-<header><div><h1 id="title"></h1><p id="sub"></p></div><div class="hb"><input class="srch" id="q" placeholder="Search name or phone"><button class="hbtn" id="bell" aria-label="Payment reminders"><svg class="i" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0112 0v5l2 2H4z"/><path d="M10 21h4"/></svg><i id="bn"></i></button><button class="hbtn" id="theme" aria-label="Dark mode"></button><button class="hbtn gear" data-t="sync" aria-label="Sync devices"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></button><button class="hbtn gear" data-t="riders" aria-label="Riders"><svg class="i" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l3-7h5l4 7M9 10L8 7H6M14 10l-1-4h3"/></svg></button></div></header>
+<header><div><h1 id="title"></h1><p id="sub"></p></div><div class="hb"><input class="srch" id="q" placeholder="Search name or phone"><button class="hbtn" id="bell" aria-label="Payment reminders"><svg class="i" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0112 0v5l2 2H4z"/><path d="M10 21h4"/></svg><i id="bn"></i></button><button class="hbtn" id="theme" aria-label="Dark mode"></button><button class="hbtn gear" data-t="sync" aria-label="Sync devices"><svg class="i" viewBox="0 0 24 24"><path d="M20 11a8 8 0 00-14.9-3M4 4v4h4"/><path d="M4 13a8 8 0 0014.9 3M20 20v-4h-4"/></svg></button><button class="hbtn gear" data-t="riders" aria-label="Riders"><svg class="i" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l3-7h5l4 7M9 10L8 7H6M14 10l-1-4h3"/></svg></button></div></header>
 <section id="view"></section>
 </main>
 <aside class="panel" id="panel"></aside>
@@ -149,7 +149,7 @@ let tab="home",last="",F="all",anim=false,method="COD",D={orders:[],riders:[],re
 let CFG={};try{CFG=JSON.parse(localStorage.getItem("fh_cfg")||"{}")}catch(e){}
 try{const l=localStorage.getItem("fh_data");if(l)D=Object.assign(D,JSON.parse(l))}catch(e){}
 const num=n=>Number(n||0).toLocaleString("en-LK"),saveCfg=()=>localStorage.setItem("fh_cfg",JSON.stringify(CFG));
-const IC={"wallet":"<rect x=\"3\" y=\"6\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M3 10h18\"/><circle cx=\"16.5\" cy=\"14.5\" r=\"1\"/>","home": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/>", "clock": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>", "check": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12.5l3 3 5-6\"/>", "plus": "<path d=\"M12 5v14M5 12h14\"/>", "rider": "<circle cx=\"6\" cy=\"17\" r=\"3\"/><circle cx=\"18\" cy=\"17\" r=\"3\"/><path d=\"M6 17l3-7h5l4 7M9 10L8 7H6M14 10l-1-4h3\"/>", "gear": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1\"/>", "bell": "<path d=\"M6 16v-5a6 6 0 0112 0v5l2 2H4z\"/><path d=\"M10 21h4\"/>", "moon": "<path d=\"M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z\"/>", "sun": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/>", "cash": "<rect x=\"3\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\"/>", "swap": "<path d=\"M4 8h15l-3-3M20 16H5l3 3\"/>"};const ic=n=>`<svg class="i" viewBox="0 0 24 24">${IC[n]}</svg>`;
+const IC={"wallet":"<rect x=\"3\" y=\"6\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M3 10h18\"/><circle cx=\"16.5\" cy=\"14.5\" r=\"1\"/>","home": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/>", "clock": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>", "check": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12.5l3 3 5-6\"/>", "plus": "<path d=\"M12 5v14M5 12h14\"/>", "rider": "<circle cx=\"6\" cy=\"17\" r=\"3\"/><circle cx=\"18\" cy=\"17\" r=\"3\"/><path d=\"M6 17l3-7h5l4 7M9 10L8 7H6M14 10l-1-4h3\"/>", "gear": "<path d=\"M20 11a8 8 0 00-14.9-3M4 4v4h4\"/><path d=\"M4 13a8 8 0 0014.9 3M20 20v-4h-4\"/>", "bell": "<path d=\"M6 16v-5a6 6 0 0112 0v5l2 2H4z\"/><path d=\"M10 21h4\"/>", "moon": "<path d=\"M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z\"/>", "sun": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/>", "cash": "<rect x=\"3\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\"/>", "swap": "<path d=\"M4 8h15l-3-3M20 16H5l3 3\"/>"};const ic=n=>`<svg class="i" viewBox="0 0 24 24">${IC[n]}</svg>`;
 const pl=o=>o.pays||(o.paid?[{t:o.doneAt,a:o.paid}]:[]);
 let DK=(localStorage.getItem("fh_theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"))==="dark";
 function applyTheme(){document.documentElement.dataset.theme=DK?"dark":"light";$("#theme").innerHTML=ic(DK?"sun":"moon")}
@@ -170,6 +170,22 @@ const lkr=n=>"LKR "+Number(n||0).toLocaleString("en-LK");
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmt=t=>new Date(t).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
 function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),3000)}
+const PWH="63ec024ca9d9744ac1daeea0f8c2ee750c5e1372074ce07669b0e192ebdc3cdf";
+async function sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function waNum(p){let d=String(p||"").replace(/\D/g,"");if(d.startsWith("00"))d=d.slice(2);if(d.startsWith("0"))d="94"+d.slice(1);else if(d.length===9)d="94"+d;return d}
+function askDelete(id){const o=D.orders.find(x=>x.id===id);if(!o)return;
+ $("#mbody").innerHTML=`<h2>Cancel delivery</h2><p style="color:var(--mut)">${esc(o.customer)} · ${lkr(o.price)}</p><label>Password</label><input id="d_p" type="password" autocomplete="off" placeholder="Enter password"><p id="d_e" style="color:var(--red);font-size:13px;margin-top:8px"></p><button class="btn g full" id="d_ok">Remove delivery</button><button class="btn o full" id="d_no">Keep it</button>`;
+ $("#modal").classList.add("show");$("#d_p").focus();
+ $("#d_no").onclick=()=>$("#modal").classList.remove("show");
+ const go=async()=>{let h="";try{h=await sha($("#d_p").value)}catch(e){$("#d_e").textContent="Password check needs a secure (https) page.";return}
+  if(h!==PWH){$("#d_e").textContent="Wrong password.";return}
+  D.del=[...(D.del||[]),id];D.orders=D.orders.filter(x=>x.id!==id);$("#modal").classList.remove("show");save();toast("Delivery removed")};
+ $("#d_ok").onclick=go;$("#d_p").onkeydown=e=>{if(e.key==="Enter")go()}}
+function editRider(i){const r=D.riders[i];if(!r)return;
+ $("#mbody").innerHTML=`<h2>${esc(r.name)}</h2><label>WhatsApp number</label><input id="e_p" type="tel" inputmode="tel" value="${esc(r.phone||"")}" placeholder="e.g. 077 123 4567"><button class="btn g full" id="e_ok">Save number</button><button class="btn o full" id="e_no">Cancel</button>`;
+ $("#modal").classList.add("show");$("#e_p").focus();
+ $("#e_no").onclick=()=>$("#modal").classList.remove("show");
+ $("#e_ok").onclick=()=>{const v=$("#e_p").value.trim();if(waNum(v).length<11)return toast("Enter a valid phone number.");r.phone=v;$("#modal").classList.remove("show");save();toast("Number saved")}}
 function save(){D.rev=(D.rev||0)+1;dirty=true;localStorage.setItem("fh_data",JSON.stringify(D));render();push()}
 const pend=()=>D.orders.filter(o=>o.status==="pending"),done=()=>D.orders.filter(o=>o.status!=="pending");
 const syncCls=()=>!CFG.gist?"":CFG.err?"err":busy?"busy on":"on",syncTxt=()=>!CFG.gist?"Local only":CFG.err?"Sync error":"Synced";
@@ -199,9 +215,9 @@ function row(o,i){const st=o.status==="done"?["Completed","ok"]:o.status==="deli
  return`<div class="tr rw" style="--i:${i}"><i class="ic">${ic(o.method==="COD"?"cash":"swap")}</i><div class="n"><b>${esc(o.customer)}</b><small>${o.method==="COD"?"Cash on delivery":"Online transfer"}${o.rider?" · "+esc(o.rider):""}</small></div><span class="dt">${fmt(o.created)}</span><span class="am">${lkr(o.price)}</span><em class="pill ${st[1]}">${st[0]}</em></div>`}
 function card(o){const due=Math.max(o.price-(o.paid||0),0),dv=o.status==="delivered";
  return`<div class="card"><div class="order"><div><h3>${esc(o.customer)}</h3>
- <div class="m"><span class="tag ${o.method==="COD"?"cod":""}">${o.method==="COD"?"Cash on delivery":"Online transfer"}</span>${o.status==="done"?'<span class="tag ok">Fully paid</span>':dv?'<span class="tag due">Amount left '+lkr(due)+'</span>':""}${esc(o.note||"")}</div>
+ <div class="m"><span class="tag ${o.method==="COD"?"cod":""}">${o.method==="COD"?"Cash on delivery":"Online transfer"}</span>${o.status==="pending"&&o.paid>=o.price?'<span class="tag ok">Transfer received</span>':""}${o.status==="done"?'<span class="tag ok">Fully paid</span>':dv?'<span class="tag due">Amount left '+lkr(due)+'</span>':""}${esc(o.note||"")}</div>
  <div class="m">Placed ${fmt(o.created)}${o.rider?` · Rider ${esc(o.rider)}`:""}</div></div>
- <div><div class="price">${lkr(o.price)}</div><div class="ba">${o.status==="pending"?`<button class="btn g sm" data-c="${o.id}">Confirm delivery</button><button class="btn o sm" data-x="${o.id}" aria-label="Delete">✕</button>`:dv?`<button class="btn g sm" data-p="${o.id}">Record payment</button>`:""}</div></div></div>
+ <div><div class="price">${lkr(o.price)}</div><div class="ba">${o.status==="pending"?`<button class="btn g sm" data-c="${o.id}">Confirm delivery</button>`:dv?`<button class="btn g sm" data-p="${o.id}">Record payment</button>`:""}<button class="btn o sm" data-x="${o.id}" aria-label="Cancel delivery" title="Cancel delivery" style="padding:3px 9px;font-size:12px;line-height:1.3">✕</button></div></div></div>
  ${o.status!=="pending"?`<div class="sum"><div>Paid<b>${lkr(o.paid)}</b></div><div>Rider fee<b>${lkr(o.fee)}</b></div><div>${dv?"Amount left":"Delivered"}<b${dv?' style="color:var(--red)"':""}>${dv?lkr(due):fmt(o.doneAt)}</b></div>${dv&&Date.now()-o.doneAt>864e5?`<div style="grid-column:1/-1;color:var(--red)">Unpaid for ${ago(o.doneAt)}</div>`:""}</div>`:""}</div>`}
 function panel(){const dn=done(),td=new Date().toDateString(),tf=dn.filter(o=>new Date(o.doneAt).toDateString()===td).reduce((a,o)=>a+o.fee,0),tot=D.orders.length,f=Math.round(dn.length/(tot||1)*8);
  const top={};dn.forEach(o=>top[o.rider]=(top[o.rider]||0)+1);const tr=Object.entries(top).sort((a,b)=>b[1]-a[1])[0];
@@ -227,7 +243,10 @@ function render(){anim=tab!==last&&!matchMedia("(prefers-reduced-motion:reduce)"
  else if(tab==="new")v.innerHTML=`<div class="card"><label>Customer name or phone number</label><input id="f_c" placeholder="e.g. 077 123 4567">
  <label>Order price (LKR)</label><input id="f_p" type="number" inputmode="decimal" placeholder="0">
  <label>Payment method</label><div class="seg"><button data-m="COD" class="${method==="COD"?"on":""}">Cash on delivery</button><button data-m="Online" class="${method==="Online"?"on":""}">Online transfer</button></div>
- <label>Delivery address (optional)</label><input id="f_n" placeholder="Area or address"><button class="btn full" id="add">Add delivery</button></div>`;
+ <label id="f_tl" style="display:flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:var(--ink);cursor:pointer;display:${method==="Online"?"flex":"none"}"><input type="checkbox" id="f_tp" style="width:auto;margin:0"> Transfer received (client already paid the order price)</label>
+ <label>Delivery address (optional)</label><input id="f_n" placeholder="Area or address">
+ <label>Rider</label><select id="f_r"><option value="">Choose later (no message sent)</option>${D.riders.map((r,i)=>`<option value="${i}">${esc(r.name)}${r.phone?"":" (no number)"}</option>`).join("")}</select>${D.riders.length?"":'<p style="color:var(--mut);font-size:12px;margin-top:6px">No riders yet. Add them in the Riders tab.</p>'}
+ <button class="btn full" id="add">Add delivery</button></div>`;
  else if(tab==="pending"||tab==="done"){let src=tab==="pending"?pend():done();
  const nf=done().filter(o=>o.status==="done").length,nd=done().length-nf,
  chips=tab==="done"?`<div class="seg" id="flt">${[["all","All ("+(nf+nd)+")"],["paid","Fully paid ("+nf+")"],["due","Still not paid ("+nd+")"]].map(([k,l])=>`<button data-f="${k}" class="${F===k?"on":""}">${l}</button>`).join("")}</div>`:"";
@@ -235,35 +254,41 @@ function render(){anim=tab!==last&&!matchMedia("(prefers-reduced-motion:reduce)"
  const a=list(src);v.innerHTML=chips+(a.length?a.map(card).join(""):`<div class="empty">${tab==="pending"?"No pending deliveries. New orders show up here.":"Nothing here yet."}</div>`)}
  else if(tab==="unpaid"){const all=unp(),tot=all.reduce((a,o)=>a+Math.max(o.price-(o.paid||0),0),0),a=list(all).sort((x,y)=>x.doneAt-y.doneAt);
  v.innerHTML=`<div class="card"><small style="color:var(--mut)">Total amount left to collect</small><div style="font-size:26px;font-weight:500;color:${tot?"var(--red)":"var(--ink)"}">${lkr(tot)}</div><small style="color:var(--mut)">${all.length} client${all.length===1?"":"s"} still to pay, oldest first</small></div>`+(a.length?a.map(card).join(""):'<div class="empty">Everyone has paid. Orders with money left show up here.</div>')}
- else if(tab==="riders")v.innerHTML=`<div class="card"><label>Rider name</label><input id="r_n" placeholder="e.g. Kasun"><button class="btn full" id="radd">Add rider</button></div>
- <div class="card">${D.riders.length?D.riders.map((r,i)=>`<div class="row"><div><b>${esc(r.name)}</b></div><button class="btn o sm" data-rd="${i}">Remove</button></div>`).join(""):'<div class="empty">Add your riders so they can pick their name when confirming.</div>'}</div>`;
+ else if(tab==="riders")v.innerHTML=`<div class="card"><label>Rider name</label><input id="r_n" placeholder="e.g. Kasun"><label>WhatsApp number</label><input id="r_p" type="tel" inputmode="tel" placeholder="e.g. 077 123 4567"><button class="btn full" id="radd">Add rider</button></div>
+ <div class="card">${D.riders.length?D.riders.map((r,i)=>`<div class="row"><div><b>${esc(r.name)}</b><small style="display:block;color:${r.phone?"var(--mut)":"var(--red)"}">${r.phone?esc(r.phone):"No phone number yet"}</small></div><div class="ba" style="margin:0"><button class="btn o sm" data-re="${i}">${r.phone?"Edit":"Add number"}</button><button class="btn o sm" data-rd="${i}">Remove</button></div></div>`).join(""):'<div class="empty">Add your riders so they can pick their name when confirming.</div>'}</div>`;
  else v.innerHTML=`<div class="card"><h2>Sync devices</h2><p style="color:var(--mut);font-size:13px">Your orders are kept in a private GitHub Gist in your own account. Create a token at github.com/settings/tokens (classic) with only the <b>gist</b> permission, then paste the same token on every device.</p>
  ${CFG.gist?`<p style="margin-top:14px"><i class="dot on"></i> Connected${CFG.err?` · <span style="color:var(--red)">${esc(CFG.err)}</span>`:""}</p><button class="btn full" id="snow">Sync now</button><button class="btn o full" id="soff">Disconnect this device</button>`:`<label>GitHub token</label><input id="s_t" type="password" placeholder="ghp_…" autocomplete="off"><button class="btn full" id="ssave">Connect</button><p style="margin-top:12px;color:var(--red);font-size:13px">${esc(CFG.err||"")}</p>`}</div>`;
  bind();count();bell()}
 function bind(){document.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{tab=b.dataset.t;render()});
- document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{method=b.dataset.m;document.querySelectorAll("[data-m]").forEach(x=>x.classList.toggle("on",x===b))});
+ document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{method=b.dataset.m;document.querySelectorAll("[data-m]").forEach(x=>x.classList.toggle("on",x===b));const tl=$("#f_tl");if(tl)tl.style.display=method==="Online"?"flex":"none"});
  const a=$("#add");if(a)a.onclick=()=>{const c=$("#f_c").value.trim(),p=+$("#f_p").value;if(!c||!(p>0))return toast("Enter the customer and a price.");
-  D.orders.push({id:Date.now().toString(36),customer:c,price:p,method,note:$("#f_n").value.trim(),status:"pending",created:Date.now(),paid:0,fee:0,rider:""});tab="pending";save();toast("Delivery added")};
+  const ri=$("#f_r").value,rd=ri===""?null:D.riders[+ri],note=$("#f_n").value.trim();
+  const tp=method==="Online"&&$("#f_tp")&&$("#f_tp").checked,od={id:Date.now().toString(36),customer:c,price:p,method,note,status:"pending",created:Date.now(),paid:tp?p:0,fee:0,rider:rd?rd.name:""};if(tp)od.pays=[{t:Date.now(),a:p}];D.orders.push(od);
+  let t="Delivery added";
+  if(rd){const n=waNum(rd.phone);if(n.length>=11){const msg=`*Fruit Hub – Delivery request*\nHi ${rd.name}, your service is required to deliver this order.\n\nClient: ${c}\nAddress: ${note||"Not provided"}\nOrder price: ${lkr(p)}\nPayment method: ${method==="COD"?"Cash on delivery":"Online transfer"}`;window.open("https://wa.me/"+n+"?text="+encodeURIComponent(msg),"_blank");t="Delivery added. Sending message to "+rd.name}else t="Delivery added, but "+rd.name+" has no phone number. Add it in Riders."}
+  tab="pending";save();toast(t)};
  document.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>confirmOrder(b.dataset.c));
  document.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>payOrder(b.dataset.p));
  document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{F=b.dataset.f;render()});
- document.querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{if(confirm("Delete this delivery?")){D.del=[...(D.del||[]),b.dataset.x];D.orders=D.orders.filter(o=>o.id!==b.dataset.x);save()}});
- const r=$("#radd");if(r)r.onclick=()=>{const n=$("#r_n").value.trim();if(!n)return toast("Enter the rider name.");D.riders.push({name:n});save()};
+ document.querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>askDelete(b.dataset.x));
+ document.querySelectorAll("[data-re]").forEach(b=>b.onclick=()=>editRider(+b.dataset.re));
+ const r=$("#radd");if(r)r.onclick=()=>{const n=$("#r_n").value.trim();if(!n)return toast("Enter the rider name.");const ph=$("#r_p").value.trim();if(waNum(ph).length<11)return toast("Enter a valid phone number.");D.riders.push({name:n,phone:ph});save()};
  document.querySelectorAll("[data-rd]").forEach(b=>b.onclick=()=>{D.riders.splice(+b.dataset.rd,1);save()});
  const sv=$("#ssave");if(sv)sv.onclick=async()=>{const t=$("#s_t").value.trim();if(!t)return toast("Paste your GitHub token.");CFG={token:t};sv.textContent="Connecting…";await connect();render();toast(CFG.err?"Could not connect":"Connected")};
  const sn=$("#snow");if(sn)sn.onclick=async()=>{dirty=true;await push();render();toast(CFG.err?"Sync failed":"Synced")};
  const off=$("#soff");if(off)off.onclick=()=>{CFG={};localStorage.removeItem("fh_cfg");render()}}
 function confirmOrder(id){const o=D.orders.find(x=>x.id===id);if(!D.riders.length){tab="riders";render();return toast("Add a rider first.")}
  const m=$("#mbody");m.innerHTML=`<h2>Confirm delivery</h2><p style="color:var(--mut)">${esc(o.customer)} · ${lkr(o.price)} · ${o.method==="COD"?"Cash on delivery":"Online transfer"}${o.note?" · "+esc(o.note):""}</p>
- <label>Rider</label><select id="c_r">${D.riders.map((r,i)=>`<option value="${i}">${esc(r.name)}</option>`).join("")}</select>
- <div class="grid2"><div><label>Customer paid (LKR)</label><input id="c_p" type="number" inputmode="decimal" placeholder="0"></div>
- <div><label>Rider fee (LKR)</label><input id="c_f" type="number" inputmode="decimal" placeholder="Set by delivery address"></div></div>
- <p id="c_left" style="margin-top:10px;font-weight:500"></p><p style="color:var(--mut);font-size:13px;margin-top:10px">Enter 0 if the customer has not paid yet. The order moves to Completed with the amount left.</p>
+ <label>Rider</label><select id="c_r">${D.riders.map((r,i)=>`<option value="${i}"${r.name===o.rider?" selected":""}>${esc(r.name)}</option>`).join("")}</select>
+ ${(o.paid||0)>=o.price?'<p style="color:var(--limed);font-weight:500;margin-top:10px">Transfer already received for this order.</p>':o.method!=="COD"?'<label style="display:flex;gap:8px;align-items:center;margin-top:12px;font-size:13px;color:var(--ink);cursor:pointer"><input type="checkbox" id="c_t" style="width:auto;margin:0"> Client paid the order price by transfer</label>':""}
+ <div class="grid2"><div><label>Customer paid (LKR)</label><input id="c_p" type="number" inputmode="decimal" placeholder="Leave empty if not paid"></div>
+ <div><label>Rider fee (LKR)</label><input id="c_f" type="number" inputmode="decimal" placeholder="Enter the amount"></div></div>
+ <p id="c_left" style="margin-top:10px;font-weight:500"></p><p style="color:var(--mut);font-size:13px;margin-top:10px">Leave the paid amount empty if the customer has not paid. The order will move to the Not paid tab with the amount left.</p>
  <button class="btn g full" id="c_ok">Confirm and send report</button><button class="btn o full" id="c_no">Cancel</button>`;
  $("#modal").classList.add("show");
  $("#c_no").onclick=()=>$("#modal").classList.remove("show");
- const lf=()=>{const v=$("#c_p").value,e=$("#c_left");if(v===""){e.textContent="";return}const d=o.price-(o.paid||0)-(+v);e.innerHTML=d>0?'Amount left to pay: <span style="color:var(--red)">'+lkr(d)+'</span>':d===0?"Fully paid":"Fully paid · extra "+lkr(-d)};$("#c_p").oninput=lf;
- $("#c_ok").onclick=()=>{const p=+$("#c_p").value,f=+$("#c_f").value;if($("#c_p").value===""||$("#c_f").value===""||isNaN(p)||p<0||isNaN(f)||f<0)return toast("Enter valid amounts.");
+ const lf=()=>{const v=$("#c_p").value,e=$("#c_left");const d=o.price-(o.paid||0)-(+v||0);e.innerHTML=d>0?'Amount left to pay: <span style="color:var(--red)">'+lkr(d)+'</span>':d===0?"Fully paid":"Fully paid · extra "+lkr(-d)};$("#c_p").oninput=lf;const ct=$("#c_t");if(ct)ct.onchange=()=>{$("#c_p").value=ct.checked?Math.max(o.price-(o.paid||0),0):"";lf()};lf();
+ $("#c_ok").onclick=()=>{const p=+$("#c_p").value||0,f=+$("#c_f").value||0;if(f<0||p<0)return toast("Enter valid amounts.");
   o.rider=D.riders[$("#c_r").value].name;o.fee=f;o.paid=(o.paid||0)+p;if(p>0)(o.pays=o.pays||[]).push({t:Date.now(),a:p});o.status=o.paid>=o.price?"done":"delivered";o.doneAt=Date.now();if(o.status==="done")o.paidAt=Date.now();
   const msg=`*Fruit Hub – Order delivered*\nDate: ${new Date().toLocaleString("en-GB",{day:"2-digit",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"})}\nClient: ${o.customer}${o.note?"\nAddress: "+o.note:""}\nOrder price: ${lkr(o.price)}\nPayment method: ${o.method==="COD"?"Cash on delivery":"Online transfer"}\nClient paid: ${lkr(o.paid)}${o.status==="delivered"?`\nAmount left: ${lkr(o.price-o.paid)}`:""}\nRider: ${o.rider}\nRider fee: ${lkr(o.fee)}`;
   $("#modal").classList.remove("show");save();
